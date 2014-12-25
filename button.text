@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+background-color: #c0c0c0;
+}
+.myButton {
+	position: absolute;
+	top: 300px;
+	right: 600px;
+	-moz-box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	-webkit-box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	background-color:#ff0000;
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:25px;
+	font-weight:bold;
+	padding:32px 76px;
+	text-decoration:none;
+	text-shadow:-1px 4px 2px #2f6627;
+}
+.myButton:hover {
+	background-color:#09f075;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.myButton1 {
+	position: absolute;
+	top: 300px;
+	right: 300px;
+	-moz-box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	-webkit-box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	background-color:#ff0000;
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:25px;
+	font-weight:bold;
+	padding:32px 76px;
+	text-decoration:none;
+	text-shadow:-1px 4px 2px #2f6627;
+}
+.myButton1:hover {
+	background-color:#09f075;
+}
+.myButton1:active {
+	position:relative;
+	top:1px;
+}
+</style>
+</head>
+<body>
+<a href="" class="myButton" onclick="NewFunction()">press</a>
+<script>
+var y;
+y=time();
+document.write(y);
+</script>
+<a href="#" class="myButton1">press</a>
+</body>
+</html>
