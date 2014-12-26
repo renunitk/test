@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<?php
+$user1 = $_POST['Button'];
+$user2 = $_POST['Button1'];
+
+if ($user1) {
+$t=date(" H:i:s", time()); 
+echo $t;
+}
+
+if ($user2) {
+$t1=date(" H:i:s", time());
+echo $t1; 
+}
+if($t>$t1)
+{
+echo "user1 pressed first";
+}else{
+echo "user2 pressed first";
+} 
+?>
+</head>
+<body>
+<form action="button.php" method="post">
+<input type="submit" name="Button" value="press" />
+<input type="submit" name="Button1" value="press"/>
+</form>
+</body>
+</html>
