@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+background-color: #c0c0c0;}
+#myButton {
+	position: absolute;	
+	top: 300px;
+	right: 600px;
+	-moz-box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	-webkit-box-shadow:inset -1px 5px 0px -37px #3dc21b;
+	box-shadow:inset -1x 5px 0px -37px #3dc21b;
+	background-color:#ff0000;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;	border:1px solid #18ab29;
+	display:inline-block;	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;	font-size:25px;
+	font-weight:bold;
+	padding:32px 76px;
+	text-decoration:none;
+	text-shadow:-1px 4px 2px #2f6627;}
+#myButton:hover {
+	background-color:#09f075;}
+myButton:active {
+	position:relative;
+	top:1px;}
+</style>
+<script src="jquery.js"></script>
+ <script>
+	$(document).ready(function(){
+		$('#myButton').click(function(){
+		var d= new Date();	
+		var var_data= d.getTime();
+		$.ajax({
+		  url:'http://localhost/renu/a.php' ,
+		  type: 'POST',
+		  data: {var_PHP_data: var_data/1000},
+                     	    success: function(data){
+			 $.get('http://localhost/renu/a.php', function(result){
+    			            alert(result);	
+ 			});
+			 $('#result').html(data)
+                                  },
+                                              error: function(){
+			               alert('failure');
+                                                                             }
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<input type ="submit" value="press" id="myButton"/>
+ <div id="result">
+</body>
+</html>
