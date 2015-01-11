@@ -34,23 +34,22 @@
 		$('#myButton').click(function(){
 		var d= new Date();	
 		var var_data= d.getTime();
-		$.ajax({
-		  url:'http://localhost/renu/a.php' ,
-		  type: 'POST',
-		  data: {var_PHP_data: var_data/1000},
-                     	    success: function(data){
-			 $.get('http://localhost/renu/a.php', function(result){
-    			            alert(result);	
+		
+		window.location.href= "http://localhost/renu/a.php? time=" + var_data/1000 ;	
+
+			 $.get('http://localhost/renu/a.php', function(result){
+
+    			            alert(result);
+	
  			});
-			 $('#result').html(data)
-                                  },
-                                              error: function(){
-			               alert('failure');
-                                                                             }
-			});
-		});
-	});
-</script>
+
+			 $('#result').html(data)
+                    
+         
+                               
+});
+});
+		</script>
 </head>
 <body>
 <input type ="submit" value="press" id="myButton"/>
